@@ -1,0 +1,274 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --accent: rgb(244,54,54);
+  --accent2: rgb(157,8,8);
+  --text: #fff;
+  --bg: #060606;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  border: none;
+  scroll-behavior: smooth;
+  background: var(--bg);
+  color: var(--text);
+}
+
+
+.btn {
+  background: var(--text);
+  color: var(--bg);
+  padding: 0.5rem 2rem;
+  border-radius: 7px;
+}
+
+.btn:hover {
+  background: rgba(255,255,255,.8);
+}
+
+
+
+
+
+/* La barre de navigation */
+nav{
+  width: 96%;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  background-color: black;
+  color: #fff;
+  padding: 0 25px;
+  z-index: 1000;
+
+}
+
+
+nav .active {
+  background: var(--bg);
+  box-shadow: 0 5px 5px 0 rgba(255,255,255,.2)
+}
+
+nav .gauche{
+  display: flex;
+  flex-wrap:wrap;
+}
+nav .gauche img{
+  padding-top: 5px;
+}
+nav .gauche .onglets{
+  display: flex;
+  flex-wrap:wrap;
+  margin-left: 20px;
+}
+nav .gauche .onglets p{
+  margin-left: 40px;
+  /*cursor:pointer;*/
+  color: #909191;
+}
+nav .gauche .onglets p:hover{
+  color: #fff;
+}
+nav .droite{
+  display: flex;
+  flex-wrap:wrap;
+}
+nav .droite p{
+  margin-right: 20px;
+  
+  /*cursor:pointer;*/
+}
+
+/*
+nav .droite .q{
+  margin-right: 20px;
+
+}
+nav.droite .q img {
+  
+  position: relative;
+}
+
+nav .droite q:hover{
+  margin-right: 20px;
+  transform: scaleY(-0.2);
+}
+
+*/
+/* Fin de la barre de navigation */
+
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.list::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.top-10::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+
+
+
+
+
+
+/*Home*/
+
+
+.slide-box {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.slide-box img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index:  -1;
+}
+
+.slide-box::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(2,3,7,.4);
+  z-index: 0;
+}
+
+.swiper-pagination-bullet {
+  width: 6px!important;
+  height: 6px!important;
+  border-radius: .2rem!important;
+  background: var(--text)!important;
+  opacity: 1!important;
+  transition: .2s ease-in-out!important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 1.5rem!important;
+  background: var(--accent)!important;
+}
+
+.slide-box-content {
+  z-index: 900;
+  padding: 0 150px;
+}
+
+.slide-box-content span {
+  color: var(--text);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: clamp(18px, 5vw, 30px);
+}
+
+.slide-box-content  h1 {
+  font-size: clamp(20px, 5vw, 70px);
+  margin-bottom: 1rem;
+  color: #fff/*#26c4ec*/
+}
+
+h7 {
+  font-size: 20px; /* Taille du texte "qui est-ce" */
+  margin-bottom: 1px; /* Ajout de marge en bas du titre */
+}
+
+.slide-box-content .play {
+  position: absolute;
+  right: 4rem;
+  bottom: 10%;
+  font-size: 3rem;
+  color: var(--text);
+}
+
+.slide-box-content .play:hover {
+  color: rgba(255,255,255,.8);
+}
+/* Fin de home */
+
+
+
+/* Les films et séries */
+.films-et-series{
+  background-color: #191a1a;
+  padding: 25px;
+}
+.films-et-series .section{
+  margin-bottom: 10px;
+}
+.films-et-series .section h2{
+  color: #fff;
+}
+.films-et-series .section .list{
+  display:flex;
+  overflow-x: auto;
+  overflow-y: auto;
+} 
+
+
+.films-et-series .section a{
+  padding-left: 15px;
+  transition : transform 0.25s
+
+}
+
+.films-et-series .section a:hover{
+   transform: scale(1.05);
+}
+
+
+.films-et-series .serie a img{
+  height: 140px;
+}
+
+
+.films-et-series .section .top-10{
+  display:flex;
+  overflow-x: auto;
+  overflow-y: auto;
+} 
+
+.films-et-series .top-10 a{
+  padding-left: 60px;
+  transition : transform 0.25s
+}
+
+.films-et-series .top-10 a:hover{
+  transform: scale(1.05);
+}
+
+.films-et-series .top-10 a img{
+  height: 300px;
+}
+
+/* Fin des films et séries */
+
+
+
+/* Pied de page */
+footer{
+  background-color: #000;
+  padding: 25px 100px;
+  color: #909191;
+}
+footer .colonnes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/* Fin du pied de page */
