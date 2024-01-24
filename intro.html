@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Netlix - accueil </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/N.png" type="image/x-icon">
+    <style>
+        body {
+            background-color:  #191a1a;
+            color: white;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        p {
+            font-size: 24px;
+            color :  rgba(255,255,255,.5)
+
+        }
+
+        p:hover {
+          color: #fff;
+        }
+
+        h4 {
+            font-size: 50px; /* Taille du texte "qui est-ce" */
+            margin-bottom: 1px; /* Ajout de marge en bas du titre */
+        }
+
+        .image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 5px; /* Espacement de 50 pixels en haut de la section d'images */
+        }
+
+        .image-wrapper {
+            text-align: center;
+            margin: 0 20px; /* Espacement horizontal entre les paires d'image et de légende */
+        }
+
+        .image-container img {
+            width: 150px; /* Ajustez la largeur des images selon vos besoins */
+            height: auto; /* Maintenir le rapport hauteur-largeur */
+            border-radius: 7px;
+        }
+
+        .test {
+          display : block;
+          padding : 4px;
+          border-radius: 7px ;
+        
+        }
+
+        .test:hover {
+          background: #fff;
+        }
+
+        .btn {
+          color:  #191a1a;
+          border-radius: 7px;
+          font-size : 13px
+        }
+
+
+    </style>
+</head>
+<body>
+    <h4>Qui est-ce ?<h4>
+    
+    <div class="image-container">
+        <div class="image-wrapper">
+          <a href="" class="test"><img src="./images/rouge.png" alt="Image 1"></a>
+            <p>Personne 1</p>
+        </div>
+
+        <div class="image-wrapper">
+          <a href="" class="test"><img src="./images/bleu.png" alt="Image 1"></a>
+          <p>Personne 2</p>
+        </div>
+        
+        <div class="image-wrapper">
+          <a href="./Netflix/Netflix_série.html" class="test"><img src="./images/pp.png" alt="Image 1"></a>
+          <p>Elisa</p>
+        </div>
+        
+        <div class="image-wrapper">
+          <a href="" class="test"><img src="./images/jaune.jpg" alt="Image 1"></a>
+          <p>Personne 3</p>
+        </div>
+        
+        <div class="image-wrapper">
+          <a href="" class="test"><img src="./images/ajouterunprof.png" alt="Image 1"></a>
+          <p>Ajouter un profil</p>
+        </div>
+    </div>
+
+    <div class = "btn"> 
+      <a>Ma personne préférée sur cette Terre fête ses 20ans</a>
+    </div>
+
+</body>
+</html>
