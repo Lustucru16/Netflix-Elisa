@@ -10,15 +10,17 @@
 
 body{
   padding: 0;
-  margin: 0;
+  margin: 0 ;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   list-style: none;
   outline: none;
   border: none;
   scroll-behavior: smooth;
+  z-index: 3;
   background: var(--bg);
   color: var(--text);
+  
 }
 
 
@@ -38,53 +40,81 @@ body{
 
 
 /* La barre de navigation */
-nav{
-  width: 96%;
+.nav{
+  width: 100%;
+  top : 0;
+  left: 0;
   display: flex;
   flex-wrap:wrap;
   justify-content: space-between;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
   color: #fff;
-  padding: 0 25px;
-  z-index: 1000;
+  padding: 1px;
+  z-index: 2;
+  position: fixed;
+  transition: background-color 0.3s ease;
 
 }
 
+.nav.scroll{
+  background-color: rgba(0, 0, 0);
+ }
 
-nav .active {
+.nav .active {
   background: var(--bg);
   box-shadow: 0 5px 5px 0 rgba(255,255,255,.2)
 }
 
-nav .gauche{
+.nav .gauche{
   display: flex;
-  flex-wrap:wrap;
+  flex-wrap:nowrap;
 }
-nav .gauche img{
-  padding-top: 5px;
+.nav .gauche img{
+  padding-top: 2px;
+  flex-wrap:nowrap;
+  padding-left: 20px;
+  overflow-x: auto; 
 }
-nav .gauche .onglets{
+.nav .gauche .onglets{
   display: flex;
-  flex-wrap:wrap;
+  flex-wrap:nowrap;
+  overflow-x: auto; 
   margin-left: 20px;
+  margin-bottom: 1rem;
 }
-nav .gauche .onglets p{
+.nav .gauche .onglets p{
   margin-left: 40px;
-  /*cursor:pointer;*/
-  color: #909191;
+  cursor:pointer;
+  color: #fff;
+  margin-bottom: 1rem;
+  /*font-size: clamp(15px, 40vw, 15px)*/
 }
-nav .gauche .onglets p:hover{
+
+.nav .gauche .onglets p:hover{
+  color: #cbd3d3;
+}
+
+.nav .droite{
+  display: flex;
+  flex-wrap:nowrap;
+}
+.nav .droite p{
+  margin-right: 20px;
+  cursor:pointer;
+}
+
+.gauche .onglets a {
+  text-decoration: none;
   color: #fff;
 }
-nav .droite{
-  display: flex;
-  flex-wrap:wrap;
+
+
+.gauche .onglets a:hover {
+  text-decoration: none;
+  color: #cbd3d3;
 }
-nav .droite p{
-  margin-right: 20px;
-  
-  /*cursor:pointer;*/
-}
+
+
 
 /*
 nav .droite .q{
@@ -108,11 +138,13 @@ html::-webkit-scrollbar {
   width: 0.5rem;
 }
 
-.list::-webkit-scrollbar {
+html::-webkit-scrollbar-thumb {
   width: 0.5rem;
+  background: #000;
 }
 
-.top-10::-webkit-scrollbar {
+.list top-10::-webkit-scrollbar-track {
+  background : #000;
   width: 0.5rem;
 }
 
@@ -140,6 +172,7 @@ html::-webkit-scrollbar {
   object-fit: cover;
   object-position: center;
   z-index:  -1;
+  transition: filter 0.3s ease; 
 }
 
 .slide-box::before {
@@ -149,6 +182,7 @@ html::-webkit-scrollbar {
   height: 100%;
   background: rgb(2,3,7,.4);
   z-index: 0;
+ 
 }
 
 .swiper-pagination-bullet {
@@ -166,9 +200,10 @@ html::-webkit-scrollbar {
 }
 
 .slide-box-content {
-  z-index: 900;
+  z-index: 1;
   padding: 0 150px;
 }
+
 
 .slide-box-content span {
   color: var(--text);
@@ -183,8 +218,13 @@ html::-webkit-scrollbar {
   color: #fff/*#26c4ec*/
 }
 
-h7 {
-  font-size: 20px; /* Taille du texte "qui est-ce" */
+.slide-box-content a{
+  text-decoration: none;
+}
+
+.h7 {
+  font-size: clamp(20px, 5vw, 70px);
+  /*font-size: 20px;  Taille du texte "qui est-ce" */
   margin-bottom: 1px; /* Ajout de marge en bas du titre */
 }
 
@@ -193,7 +233,9 @@ h7 {
   right: 4rem;
   bottom: 10%;
   font-size: 3rem;
+  text-decoration: none;
   color: var(--text);
+  
 }
 
 .slide-box-content .play:hover {
@@ -209,8 +251,9 @@ h7 {
   padding: 25px;
 }
 .films-et-series .section{
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
+
 .films-et-series .section h2{
   color: #fff;
 }
