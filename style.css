@@ -67,7 +67,7 @@ body{
 
 .nav .gauche{
   display: flex;
-  flex-wrap:nowrap;
+  flex-wrap:wrap;
 }
 .nav .gauche img{
   padding-top: 2px;
@@ -134,19 +134,17 @@ nav .droite q:hover{
 */
 /* Fin de la barre de navigation */
 
+
 html::-webkit-scrollbar {
   width: 0.5rem;
 }
 
-html::-webkit-scrollbar-thumb {
+
+.section ::-webkit-scrollbar{
+  background : rgba(0, 0, 0, 0);
   width: 0.5rem;
-  background: #000;
 }
 
-.list top-10::-webkit-scrollbar-track {
-  background : #000;
-  width: 0.5rem;
-}
 
 
 
@@ -283,7 +281,7 @@ html::-webkit-scrollbar-thumb {
 .films-et-series .section .top-10{
   display:flex;
   overflow-x: auto;
-  overflow-y: auto;
+  overflow-y: hidden;
 } 
 
 .films-et-series .top-10 a{
