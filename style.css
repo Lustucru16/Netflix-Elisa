@@ -73,12 +73,12 @@ body{
   padding-top: 2px;
   flex-wrap:wrap;
   padding-left: 20px;
-  overflow-x: auto; 
+  /*overflow-x: auto; */
 }
 .nav .gauche .onglets{
   display: flex;
   flex-wrap:wrap;
-  overflow-x: auto; 
+  /*overflow-x: auto; */
   margin-left: 20px;
   margin-bottom: 1rem;
 }
@@ -138,13 +138,11 @@ html::-webkit-scrollbar {
   width: 0.5rem;
 }
 
-html::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar {
   width: 0.5rem;
-  background: #000;
 }
 
-.list top-10::-webkit-scrollbar-track {
-  background : #000;
+.top-10::-webkit-scrollbar {
   width: 0.5rem;
 }
 
