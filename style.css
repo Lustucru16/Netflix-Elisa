@@ -42,8 +42,8 @@ body{
 /* La barre de navigation */
 .nav{
   width: 100%;
-  top : 0;
-  left: 0;
+  /*top : 0;
+  left: 0;*/
   display: flex;
   flex-wrap:wrap;
   justify-content: space-between;
@@ -51,7 +51,7 @@ body{
   color: #fff;
   padding: 1px;
   z-index: 2;
-  position: fixed;
+  /*position: fixed;*/
   transition: background-color 0.3s ease;
 
 }
@@ -67,17 +67,17 @@ body{
 
 .nav .gauche{
   display: flex;
-  flex-wrap:wrapp;
+  flex-wrap:wrap;
 }
 .nav .gauche img{
   padding-top: 2px;
-  flex-wrap:wrapp;
+  flex-wrap:wrap;
   padding-left: 20px;
   overflow-x: auto; 
 }
 .nav .gauche .onglets{
   display: flex;
-  flex-wrap:wrapp;
+  flex-wrap:wrap;
   overflow-x: auto; 
   margin-left: 20px;
   margin-bottom: 1rem;
@@ -96,7 +96,7 @@ body{
 
 .nav .droite{
   display: flex;
-  flex-wrap:wrapp;
+  flex-wrap:wrap;
 }
 .nav .droite p{
   margin-right: 20px;
