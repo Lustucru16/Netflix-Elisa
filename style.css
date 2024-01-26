@@ -67,17 +67,17 @@ body{
 
 .nav .gauche{
   display: flex;
-  flex-wrap:nowrap;
+  flex-wrap:wrapp;
 }
 .nav .gauche img{
   padding-top: 2px;
-  flex-wrap:nowrap;
+  flex-wrap:wrapp;
   padding-left: 20px;
   overflow-x: auto; 
 }
 .nav .gauche .onglets{
   display: flex;
-  flex-wrap:nowrap;
+  flex-wrap:wrapp;
   overflow-x: auto; 
   margin-left: 20px;
   margin-bottom: 1rem;
@@ -96,7 +96,7 @@ body{
 
 .nav .droite{
   display: flex;
-  flex-wrap:nowrap;
+  flex-wrap:wrapp;
 }
 .nav .droite p{
   margin-right: 20px;
